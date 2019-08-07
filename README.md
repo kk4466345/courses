@@ -1,8 +1,8 @@
 # Current Semister courses
 
-iit courses
+iitk courses
 
-intthis branch i have all the course which is currently going on
+In this branch i have all the course which is currently going on
 
 
 #7th sem
