@@ -1,0 +1,38 @@
+Root
+   |-----> P1
+
+	    |--->folder1
+
+                       |---> 1.txt (50 Bytes)
+
+	    |--->2.txt (100 Bytes)
+   
+   |-----> P3
+
+   	    |---> A.txt (20 Bytes)
+
+   |-----> P4
+            |---> B.txt (40 Bytes)
+
+   |-----> P5
+            |---> C.txt (40 Bytes)
+
+
+-> Path to the Root folder will be given as command line input.
+
+-> You to fork 4 process for P1,P3,P4 and P5. Each process should check and sumup the file size in it corresponding directory.
+	Sum up
+	Root -> 250 Bytes
+	P1 -> 150 Bytes
+	P3 -> 20 Bytes
+	P4 -> 40 Bytes
+	P5 -> 40 Bytes
+
+-> Note : Don't Print the entire path, Just print the directory name.
+
+Expected Output:
+Root 250
+P1 150
+P3 20
+P5 40
+P4 40

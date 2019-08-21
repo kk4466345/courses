@@ -1,0 +1,15 @@
+Execute your program and verify the results with output of following grep commands.
+
+
+grep -rF Kanpur IITK| wc -l
+grep -rF Engineering IITK/Postgraduate/details.txt| wc -l
+grep -rF Engineering IITK/Undergraduate/| wc -l
+
+
+
+
+grep -rF Engineering IITK/Postgraduate/details.txt|tee output1.txt| wc -l
+grep -rF Examination IITK|tee output1.txt| wc -l
+grep -rF Engineering IITK/Undergraduate/|tee output1.txt| wc -l
+
+

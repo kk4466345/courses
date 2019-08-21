@@ -1,0 +1,9 @@
+Execute your program and verify the results with output of following grep commands.
+
+
+grep -rF same IITK/Postgraduate/courses/faculties/osfaculty/TA/details.txt
+grep -rF young IITK/Postgraduate/courses
+grep -rF steps IITK/Undergraduate/labs/kdlabs/101
+grep -rF Kanpur IITK/
+
+

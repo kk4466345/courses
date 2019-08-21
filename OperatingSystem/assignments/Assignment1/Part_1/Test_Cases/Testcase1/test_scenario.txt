@@ -1,0 +1,7 @@
+Execute your program and verify the results with output of following grep commands.
+
+
+grep -rF Kanpur IITK
+grep -rF Engineering IITK/Postgraduate/details.txt
+grep -rF Engineering IITK/Undergraduate/
+
