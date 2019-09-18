@@ -1,9 +1,9 @@
 # Current Semister courses
 
-iitk courses
+currennt semister course
 
 In this branch i have all the course which is currently going on
 
 
-#7th sem
+# 7th sem
 
