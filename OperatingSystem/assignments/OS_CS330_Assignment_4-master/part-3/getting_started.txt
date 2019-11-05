@@ -1,0 +1,16 @@
+Step-1: compile the code base
+        $make
+
+Step-2: Generate input file
+        $./inputgen sample 10000 3000   
+
+        generates one input file (sample-3000.bin) containing 10000 operations on maximum 3000 unique keys.
+        An equivalent TXT file sample-3000.txt is generated which is in human readable form
+
+Step-3: Run serial hash
+       
+        $./serial_hash sample-3000.bin 3001 1 > output.txt
+       
+        Performs all operations mentioned in sample-3000.bin. It generates thread-1.out which logs all operations 
+        and their status ( 0 == success). output.txt contains all valid entries in the hash table at the end.
+     
