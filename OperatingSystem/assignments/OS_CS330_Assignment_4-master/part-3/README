@@ -1,0 +1,42 @@
+PLEASE DONOT DISTRIBUTE THE CODE.
+=================================
+
+Executing make generates three executables:  inputgen, serial_hash and parallel_hash
+
+inputgen: Generates input files which is passed as an input to the serial_hash or parallel_hash programs.
+          The input file contains hash operations: PUT, GET and DEL along with the key and data (if required)
+          Example: Executing $./inputgen sample 10000 3000    creates two files i.e., sample-3000.bin and sample-3000.txt.
+          Note that, only .bin file is passed as an argument to serial_hash or parallel_hash. The .txt file is 
+          a human readable equivalent which can be used for debugging (if required). See the comments in inputgen.c
+          for detailed format. Note that, the third argument (i.e.,3000) puts an upper cap on the number of unique
+          keys and therefore can be passed as the hash table size while running the hash processing. (see below) 
+
+serial_hash: This implements a serial version of hashing by reading the input file (.bin) created using inputgen.
+             It generates one output file (thread-1.out) which logs all operations and their status 
+             At the end, serial_hash  also dumps the hash table (*see main.c, common.h)
+             How to run: 
+                          without redirect:  $./serial_hash sample-3000.bin 3001 1 
+                          with redirect:     $./serial_hash sample-3000.bin 3001 1 > output.txt
+              
+             Note that, the last argument *must be* 1 while running the  program.
+
+             serial_hash.c:  This file provides implementation of the following functions.
+             
+             1. read_op:         Reads on operation from the input file using already initialized 'struct input_manager'/ 
+             2. done_one:        Takes action on completion of one hash operation, called from main.c
+             3. lookup:          Performs a hash lookup operation
+             4. insert_update:   Performs a fresh insertion or update
+             5. purge_key:       Deletes a hash entry
+
+parallel_hash:  This is the template which should be implemented by you.  It is executed in the same manner albeit with more 
+                than one thread.      
+                How to run: 
+                          without redirect:  $./serial_hash sample-3000.bin 3001 8
+                          with redirect:     $./serial_hash sample-3000.bin 3001 8 > output.txt
+
+NOTE:   
+         1. You are allowed to modify parallel_hash.c only
+         2. You are not allowed to use any other locks/syncronization primitives other than what is already available (in common.h)
+         3. Your locking should be as fine grained as possible i.e., should allow parallel operations as much as possible. 
+            Serializing the hash operations (holding a lock for the whole duration of hash operation) will result in zero
+            marks.   

@@ -1,0 +1,16 @@
+To compile: run 'make'
+
+1. You are required to modify only thread_func.c. Insert appropriate
+   pthread_mutex_lock() and pthread_mutex_unlock() statements only. 
+   Do not modify any other logic. Note that, line #22 should not be
+   executed holding the lock.    
+
+2. To test, you may provide any existing file as an argument. For example,
+    
+   $./blockhash /tmp/something.txt 1   # Computes and prints hash using
+                                       # a single thread     
+   
+   $./blockhash /tmp/something.txt 8   # Computes and prints hash using
+                                       # eight threads 
+
+3. You may find it useful to redirect the output to another file  

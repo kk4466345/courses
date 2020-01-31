@@ -1,0 +1,12 @@
+To compile: run 'make'
+
+1. You are required to modify only rwlock.c. Insert appropriate
+   code in the provided function template.Do not modify any other logic. 
+   Note that, you *must not* change any other file and *must not* declare
+   any global/static variables in rwlock.c. However, you may create local
+   variables inside the functions.    
+
+2. A sample testcase is provided in main.c. Please see the comments there.
+    
+
+3. Design new test cases by modifying main.c to test your code.

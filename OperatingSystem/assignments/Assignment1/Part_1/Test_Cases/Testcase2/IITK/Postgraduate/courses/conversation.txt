@@ -1,0 +1,38 @@
+Professor: And thus we reach the first of our three pieces on operating systems:
+virtualization.
+Student: But what is virtualization, oh noble professor?
+Professor: Imagine we have a peach.
+Student: A peach? (incredulous)
+Professor: Yes, a peach. Let us call that the physical peach. But we have many
+eaters who would like to eat this peach. What we would like to present to each
+eater is their own peach, so that they can be happy. We call the peach we give
+eaters virtual peaches; we somehow create many of these virtual peaches out of
+the one physical peach. And the important thing: in this illusion, it looks to each
+eater like they have a physical peach, but in reality they don’t.
+Student: So you are sharing the peach, but you don’t even know it?
+Professor: Right! Exactly.
+Student: But there’s only one peach.
+Professor: Yes. And...?
+Student: Well, if I was sharing a peach with somebody else, I think I would
+notice.
+Professor: Ah yes! Good point. But that is the thing with many eaters; most
+of the time they are napping or doing something else, and thus, you can snatch
+that peach away and give it to someone else for a while. And thus we create the
+illusion of many virtual peaches, one peach for each person!
+Student: Sounds like a bad campaign slogan. You are talking about computers,
+right Professor?
+Professor: Ah, young grasshopper, you wish to have a more concrete example.
+Good idea! Let us take the most basic of resources, the CPU. Assume there is one
+physical CPU in a system (though now there are often two or four or more). What
+virtualization does is take that single CPU and make it look like many virtual
+CPUs to the applications running on the system. Thus, while each application
+3
+4 A DIALOGUE ON VIRTUALIZATION
+thinks it has its own CPU to use, there is really only one. And thus the OS has
+created a beautiful illusion: it has virtualized the CPU.
+Student: Wow! That sounds like magic. Tell me more! How does that work?
+Professor: In time, young student, in good time. Sounds like you are ready to
+begin.
+Student: I am! Well, sort of. I must admit, I’m a little worried you are going to
+start talking about peaches again.
+Professor: Don’t worry too much; I don’t even like peaches. And thus we begin...

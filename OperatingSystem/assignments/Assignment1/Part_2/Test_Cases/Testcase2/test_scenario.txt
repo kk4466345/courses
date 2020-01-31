@@ -1,0 +1,16 @@
+Execute your program and verify the results with output of following grep commands.
+
+
+grep -rF same IITK/Postgraduate/courses/faculties/osfaculty/TA/details.txt| wc -l
+grep -rF young IITK/Postgraduate/courses| wc -l
+grep -rF steps IITK/Undergraduate/labs/kdlabs/101| wc -l
+grep -rF Kanpur IITK/ | wc -l
+
+
+
+
+grep -rF same IITK/Postgraduate/courses/faculties/osfaculty/TA/details.txt|tee output1.txt| wc -l
+grep -rF young IITK/Postgraduate/courses|tee output1.txt| wc -l
+grep -rF steps IITK/Undergraduate/labs/kdlabs/101|tee output1.txt| wc -l
+grep -rF Kanpur IITK/|tee output1.txt| wc -l
+
